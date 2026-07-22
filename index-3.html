@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vineyard Villas | Burdett, NY – South East Seneca</title>
+  <meta name="description" content="Vineyard Villas in Burdett, NY — private A-frame villas and suites on the east shore of Seneca Lake. Panoramic lake and vineyard views, private balconies, campfire pits, on-site vineyard, pond, and the Hector Hideaway restaurant." />
+  <meta property="og:title" content="Vineyard Villas | Burdett, NY" />
+  <meta property="og:description" content="Private A-frame villas overlooking Seneca Lake — balconies, campfire pits, full kitchens, on-site vineyard and restaurant. In the heart of the Seneca Lake Wine Trail." />
+  <meta property="og:image" content="https://southeastseneca.github.io/Vineyardvillas/Hero.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#323d41;--amber:#eeaf70;--slate:#4e6d77;--mauve:#b37565;--white:#ffffff;--cream:#f7f4f0;--ink:#1e2729;--muted:#6b7c80;--border:#dde4e6;--font-head:'Oswald',sans-serif;--font-body:'Epilogue',sans-serif;--max-width:1100px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.7;}
+    .ses-icon{display:inline-flex;align-items:center;justify-content:center;background:var(--amber);border-radius:50%;flex-shrink:0;}
+    .ses-icon svg{display:block;} .ses-icon-sm{width:28px;height:28px;} .ses-icon-sm svg{width:15px;height:15px;} .ses-icon-md{width:38px;height:38px;} .ses-icon-md svg{width:20px;height:20px;}
+
+    /* HERO */
+    .hero{position:relative;height:620px;background:var(--navy) center/cover no-repeat;background-image:url('Hero.jpeg');background-position:center 50%;display:flex;align-items:flex-end;}
+    .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(50,61,65,0.92) 0%,rgba(50,61,65,0.15) 60%,transparent 100%);}
+    .hero-content{position:relative;z-index:1;max-width:var(--max-width);margin:0 auto;padding:0 2rem 3rem;width:100%;}
+    .category-tag{display:inline-flex;align-items:center;gap:0.5rem;background:var(--amber);color:var(--navy);font-family:var(--font-head);font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem 0.3rem 0.5rem;border-radius:2px;margin-bottom:0.65rem;}
+    .category-tag .ses-icon{width:22px;height:22px;background:rgba(50,61,65,0.15);} .category-tag .ses-icon svg{width:12px;height:12px;}
+    .hero h1{font-family:var(--font-head);font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:700;color:var(--white);line-height:1.05;letter-spacing:0.02em;text-transform:uppercase;}
+    .hero-tagline{color:rgba(255,255,255,0.82);font-size:1.05rem;font-weight:300;font-style:italic;margin-top:0.5rem;max-width:600px;}
+    .hero-book-btn{display:inline-flex;align-items:center;gap:0.6rem;background:var(--amber);color:var(--navy);font-family:var(--font-head);font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.9rem 1.6rem;border-radius:4px;text-decoration:none;margin-top:1.25rem;transition:background 0.2s;}
+    .hero-book-btn:hover{background:#e09e58;}
+
+    /* QUICK BAR */
+    .quick-bar{background:var(--navy);border-top:3px solid var(--amber);}
+    .quick-bar-inner{max-width:var(--max-width);margin:0 auto;padding:0 2rem;display:flex;flex-wrap:wrap;}
+    .quick-item{display:flex;align-items:center;gap:0.6rem;padding:0.9rem 1.5rem 0.9rem 0;margin-right:1.5rem;font-size:0.85rem;color:rgba(255,255,255,0.9);border-right:1px solid rgba(255,255,255,0.12);}
+    .quick-item:last-child{border-right:none;} .quick-item strong{font-weight:600;color:var(--white);}
+
+    /* BOOKING BANNER */
+    .book-banner{background:var(--slate);padding:1.25rem 2rem;}
+    .book-banner-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .book-banner-text{color:var(--white);}
+    .book-banner-text strong{font-family:var(--font-head);font-size:1rem;letter-spacing:0.04em;text-transform:uppercase;display:block;}
+    .book-banner-text span{font-size:0.85rem;color:rgba(255,255,255,0.72);}
+    .book-banner-btns{display:flex;gap:0.75rem;flex-wrap:wrap;}
+    .book-btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--amber);color:var(--navy);font-family:var(--font-head);font-weight:700;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.25rem;border-radius:4px;text-decoration:none;transition:background 0.2s;}
+    .book-btn-primary:hover{background:#e09e58;}
+    .book-btn-secondary{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:var(--white);font-family:var(--font-head);font-weight:600;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.25rem;border-radius:4px;text-decoration:none;transition:background 0.2s;}
+    .book-btn-secondary:hover{background:rgba(255,255,255,0.2);}
+
+    /* MAIN LAYOUT */
+    .main-wrapper{max-width:var(--max-width);margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;}
+    section{margin-bottom:2.75rem;}
+    .section-label{font-family:var(--font-head);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--slate);margin-bottom:0.35rem;display:flex;align-items:center;gap:0.4rem;}
+    .section-label::after{content:'';display:inline-block;width:24px;height:1px;background:var(--slate);opacity:0.5;}
+    .section-title{font-family:var(--font-head);font-size:1.75rem;font-weight:600;color:var(--navy);margin-bottom:0.85rem;letter-spacing:0.02em;text-transform:uppercase;border-bottom:2px solid var(--amber);padding-bottom:0.5rem;display:inline-block;}
+    p{margin-bottom:1rem;color:#3a4f54;font-size:0.95rem;}
+
+    /* WHY STAY CARDS */
+    .why-stay{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:0.85rem;margin-top:0.85rem;}
+    .why-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--amber);padding:1rem 1.1rem;border-radius:4px;text-align:center;}
+    .why-card .icon-wrap{display:flex;justify-content:center;margin-bottom:0.5rem;}
+    .why-card h4{font-family:var(--font-head);font-size:0.82rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--navy);margin-bottom:0.2rem;}
+    .why-card p{font-size:0.78rem;color:var(--muted);margin:0;line-height:1.5;}
+
+    /* COTTAGE CARDS */
+    .cottage-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:0.85rem;}
+    .cottage-card{background:var(--white);border:1px solid var(--border);border-radius:6px;overflow:hidden;}
+    .cottage-card-header{background:var(--navy);padding:0.75rem 1rem;display:flex;align-items:center;justify-content:space-between;}
+    .cottage-card-header h4{font-family:var(--font-head);font-size:0.88rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);}
+    .cottage-badge{background:var(--amber);color:var(--navy);font-family:var(--font-head);font-size:0.7rem;font-weight:700;letter-spacing:0.06em;padding:0.2rem 0.5rem;border-radius:2px;}
+    .cottage-card-body{padding:0.9rem 1rem;}
+    .cottage-detail{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:#3a4f54;margin-bottom:0.35rem;}
+    .cottage-detail:last-child{margin-bottom:0;}
+    .cottage-detail .ses-icon{width:20px;height:20px;flex-shrink:0;} .cottage-detail .ses-icon svg{width:11px;height:11px;}
+
+    /* COMPARE TABLE */
+    .table-head{font-family:var(--font-head);font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--slate);display:block;margin:1.75rem 0 0.6rem;}
+    .table-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:6px;background:var(--white);}
+    .compare-table{width:100%;border-collapse:collapse;font-size:0.85rem;min-width:520px;}
+    .compare-table thead th{background:var(--navy);color:var(--white);font-family:var(--font-head);font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-align:left;padding:0.7rem 0.9rem;}
+    .compare-table thead th:not(:first-child){text-align:center;}
+    .compare-table tbody td{padding:0.7rem 0.9rem;border-top:1px solid var(--border);color:#3a4f54;text-align:center;}
+    .compare-table tbody td:first-child{text-align:left;}
+    .compare-table tbody td strong{display:block;font-family:var(--font-head);font-size:0.85rem;font-weight:600;color:var(--navy);letter-spacing:0.02em;}
+    .compare-table tbody td span{font-size:0.75rem;color:var(--muted);}
+    .compare-table tbody tr:nth-child(even){background:rgba(247,244,240,0.6);}
+    .compare-table .yes{color:#4a7c59;font-weight:600;}
+    .compare-table .no{color:var(--muted);}
+    .compare-table .row-highlight{background:rgba(238,175,112,0.14)!important;}
+    .table-note{font-size:0.8rem;color:var(--muted);margin-top:0.75rem;line-height:1.6;}
+
+    /* PHOTO GRID */
+    .photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0.85rem;margin-top:0.85rem;}
+    .photo-card{background:var(--white);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin:0;}
+    .photo-card img{width:100%;height:170px;object-fit:cover;display:block;}
+    .photo-card figcaption{padding:0.6rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.45;}
+
+    /* AMENITIES */
+    .amenity-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:0.6rem;margin-top:0.75rem;}
+    .amenity-item{display:flex;align-items:center;gap:0.6rem;background:var(--white);border:1px solid var(--border);padding:0.55rem 0.85rem;border-radius:3px;font-size:0.83rem;color:#3a4f54;}
+    .amenity-item .ses-icon{width:22px;height:22px;flex-shrink:0;} .amenity-item .ses-icon svg{width:12px;height:12px;}
+
+    /* STORY */
+    .story-section{background:var(--navy);border-radius:8px;padding:2rem 2.25rem;margin-bottom:2.75rem;position:relative;overflow:hidden;}
+    .story-section::before{content:'\201C';position:absolute;top:0.5rem;right:1.5rem;font-size:7rem;color:rgba(238,175,112,0.1);line-height:1;font-family:Georgia,serif;pointer-events:none;}
+    .story-label{font-family:var(--font-head);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.6rem;}
+    .story-title{font-family:var(--font-head);font-size:1.4rem;font-weight:600;color:var(--white);text-transform:uppercase;letter-spacing:0.03em;margin-bottom:1.1rem;}
+    .story-body{font-size:0.97rem;font-style:italic;font-weight:300;line-height:1.85;border-left:3px solid var(--amber);padding-left:1.25rem;}
+    .story-body p{color:rgba(255,255,255,0.82);margin-bottom:0.85rem;} .story-body p:last-child{margin-bottom:0;}
+    .story-attribution{margin-top:1.1rem;padding-top:0.85rem;border-top:1px solid rgba(255,255,255,0.1);font-size:0.82rem;color:var(--amber);font-weight:500;font-style:normal;display:flex;align-items:center;gap:0.6rem;}
+
+    /* TIPS */
+    .tips-list{list-style:none;margin-top:0.75rem;}
+    .tips-list li{display:flex;gap:0.75rem;margin-bottom:0.7rem;font-size:0.92rem;color:#3a4f54;align-items:flex-start;}
+
+    /* SIDEBAR */
+    .sidebar{position:sticky;top:2rem;}
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:1.5rem;box-shadow:0 1px 4px rgba(50,61,65,0.07);}
+    .sidebar-card-header{background:var(--navy);color:var(--white);padding:0.75rem 1.15rem;font-family:var(--font-head);font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;display:flex;align-items:center;gap:0.6rem;}
+    .sidebar-card-body{padding:1.15rem;}
+    .info-row{display:flex;gap:0.65rem;margin-bottom:0.9rem;font-size:0.88rem;align-items:flex-start;} .info-row:last-child{margin-bottom:0;}
+    .info-row .label{font-family:var(--font-head);font-weight:600;display:block;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.15rem;}
+    .info-row a{color:var(--slate);text-decoration:none;font-weight:500;}
+    .divider{border:none;border-top:1px solid var(--border);margin:1rem 0;}
+    .hours-sub-head{font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin:0.85rem 0 0.4rem;display:block;}
+    .hours-table{width:100%;font-size:0.83rem;border-collapse:collapse;}
+    .hours-table tr td{padding:0.3rem 0;} .hours-table tr td:first-child{color:var(--muted);}
+    .hours-table tr td:last-child{text-align:right;font-weight:600;color:var(--navy);}
+    .book-block{display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;}
+    .book-block a{display:flex;align-items:center;justify-content:center;gap:0.6rem;font-family:var(--font-head);font-weight:700;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.8rem 1rem;border-radius:4px;text-decoration:none;transition:background 0.2s;}
+    .book-block .btn-direct{background:var(--amber);color:var(--navy);}
+    .book-block .btn-direct:hover{background:#e09e58;}
+    .book-block .btn-phone{background:var(--slate);color:var(--white);}
+    .book-block .btn-phone:hover{background:#3f5a63;}
+    .social-links{display:flex;gap:0.5rem;margin-top:0.75rem;}
+    .social-links a{flex:1;text-align:center;background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:0.5rem;font-family:var(--font-head);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--navy);text-decoration:none;display:flex;align-items:center;justify-content:center;gap:0.4rem;}
+    .social-links a:hover{background:var(--border);}
+    .map-wrap iframe{width:100%;height:185px;border:none;display:block;}
+    .map-note{padding:0.7rem 1.15rem;font-size:0.8rem;color:var(--muted);display:flex;align-items:center;gap:0.5rem;}
+    .nearby-item{display:flex;gap:0.75rem;margin-bottom:0.8rem;align-items:flex-start;} .nearby-item:last-child{margin-bottom:0;}
+    .nearby-item strong{display:block;font-size:0.88rem;color:var(--navy);font-weight:600;} .nearby-item span{font-size:0.78rem;color:var(--muted);}
+
+    /* HIGHLIGHT BADGE */
+    .proud-badge{display:inline-flex;align-items:center;gap:0.6rem;background:linear-gradient(135deg,rgba(238,175,112,0.16),rgba(179,117,101,0.12));border:1px solid rgba(179,117,101,0.3);border-radius:4px;padding:0.6rem 1rem;margin-top:0.5rem;font-size:0.82rem;color:var(--ink);}
+    .proud-badge strong{font-family:var(--font-head);letter-spacing:0.04em;}
+
+    /* KEEP EXPLORING */
+    .keep-exploring{background:var(--cream);padding:3rem 2rem;border-top:3px solid var(--amber);}
+    .keep-exploring-inner{max-width:var(--max-width);margin:0 auto;}
+    .keep-exploring-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;margin-top:1.5rem;}
+    .ke-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--amber);border-radius:6px;text-decoration:none;display:block;overflow:hidden;transition:box-shadow 0.2s;}
+    .ke-card:hover{box-shadow:0 4px 16px rgba(50,61,65,0.12);}
+    .ke-card-dark{background:var(--navy);border-color:var(--navy);}
+    .ke-card-body{padding:1.25rem 1.5rem 1.5rem;}
+    .ke-icon{font-size:1.75rem;margin-bottom:0.75rem;display:block;}
+    .ke-label{font-family:var(--font-head);font-size:0.65rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--slate);margin-bottom:0.4rem;}
+    .ke-card-dark .ke-label{color:var(--amber);}
+    .ke-title{font-family:var(--font-head);font-size:1.05rem;font-weight:600;color:var(--navy);text-transform:uppercase;margin-bottom:0.5rem;}
+    .ke-card-dark .ke-title{color:var(--white);}
+    .ke-desc{font-size:0.83rem;color:var(--muted);line-height:1.6;margin:0;}
+    .ke-card-dark .ke-desc{color:rgba(255,255,255,0.65);}
+    .ke-arrow{margin-top:1rem;font-family:var(--font-head);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);}
+    .page-footer{background:#212b2e;color:rgba(255,255,255,0.45);text-align:center;font-size:0.78rem;padding:1.5rem 1rem;}
+    .page-footer strong{color:rgba(255,255,255,0.8);} .page-footer a{color:var(--amber);text-decoration:none;}
+
+    @media(max-width:768px){
+      .main-wrapper{grid-template-columns:1fr;} .sidebar{position:static;}
+      .quick-bar-inner{flex-direction:column;padding:0.75rem 2rem;}
+      .quick-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);padding:0.6rem 0;margin:0;}
+      .quick-item:last-child{border-bottom:none;}
+      .book-banner-inner{flex-direction:column;align-items:flex-start;}
+      .cottage-grid{grid-template-columns:1fr;}
+      .why-stay{grid-template-columns:repeat(2,1fr);}
+    }
+  </style>
+
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="icon-lodging" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><rect x="6" y="12" width="12" height="9" rx="1"/><path d="M9 21v-6h6v6"/></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.78" y2="4.22"/></symbol>
+    <symbol id="icon-water" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></symbol>
+    <symbol id="icon-fire" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-6 7-6 13a6 6 0 0 0 12 0c0-6-6-7-6-13z"/><path d="M12 12c0 3-2 4-2 6a2 2 0 0 0 4 0c0-2-2-3-2-6z"/></symbol>
+    <symbol id="icon-dog" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6c0-1.7 1.3-3 3-3h2l1 2h1a1 1 0 0 1 1 1v2l-2 1v2"/><path d="M16 11c0 3-2 6-5 7H8a2 2 0 0 1-2-2v-2l-1-3 2-1 1 2h2l1-1"/><path d="M8 14v4"/><path d="M12 14v4"/></symbol>
+    <symbol id="icon-wifi" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="#1e2729"/></symbol>
+    <symbol id="icon-kitchen" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="12" y1="9" x2="12" y2="21"/><circle cx="7" cy="6" r="1" fill="#1e2729"/><circle cx="17" cy="6" r="1" fill="#1e2729"/></symbol>
+    <symbol id="icon-tv" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></symbol>
+    <symbol id="icon-ac" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="9" rx="2"/><line x1="7" y1="15" x2="5" y2="20"/><line x1="12" y1="15" x2="12" y2="20"/><line x1="17" y1="15" x2="19" y2="20"/><line x1="6" y1="10" x2="18" y2="10"/></symbol>
+    <symbol id="icon-park" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="18" width="20" height="3" rx="1"/><path d="M8 18V9l4-6 4 6v9"/><path d="M5 18v-5l3-4"/><path d="M19 18v-5l-3-4"/></symbol>
+    <symbol id="icon-grill" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16"/><path d="M12 9V3"/><circle cx="12" cy="15" r="4"/><path d="M8.93 18.93L7 21"/><path d="M15.07 18.93L17 21"/></symbol>
+    <symbol id="icon-boat" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1C7 22 7 21 9.5 21s2.5 1 5 1 2.5-1 5-1c1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 3v4"/></symbol>
+    <symbol id="icon-playground" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="3"/><line x1="20" y1="21" x2="20" y2="3"/><path d="M4 7h16"/><path d="M8 14l8-4"/><path d="M16 14l-8-4"/></symbol>
+    <symbol id="icon-accessible" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="1.5"/><path d="M9 11l3-3 3 3"/><path d="M9 15l1 6h4l1-6"/><path d="M6 9h12"/></symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></symbol>
+    <symbol id="icon-winery" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l-1.5 7a4 4 0 0 1-5 0L8 3z"/><line x1="12" y1="14" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></symbol>
+    <symbol id="icon-restaurant" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="3" x2="8" y2="21"/><path d="M6 3v6a3 3 0 0 0 4 0V3"/><line x1="16" y1="3" x2="16" y2="21"/></symbol>
+    <symbol id="icon-brewery" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="10" width="13" height="12" rx="1"/><path d="M15 12 Q21 12 21 16 Q21 20 15 20"/><circle cx="5" cy="10" r="2.2" fill="white" stroke="#1e2729" stroke-width="1.4"/><circle cx="9" cy="9" r="2.5" fill="white" stroke="#1e2729" stroke-width="1.4"/><circle cx="13" cy="10" r="2.2" fill="white" stroke="#1e2729" stroke-width="1.4"/></symbol>
+    <symbol id="icon-hike" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M10 7l-3 5h4l-2 6 5-3"/><path d="M14 16l2 5"/><path d="M9 12l-2 7"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15.5,14"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2H7a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9z"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="icon-pinterest" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.5 20c-.6-2 .3-4.5.8-6.4"/><path d="M8.2 11.4c-.6-2.4 1-4.8 3.8-4.8 2.2 0 3.7 1.4 3.7 3.5 0 2.4-1.3 4.4-3.2 4.4-1 0-1.8-.9-1.5-1.9"/></symbol>
+    <symbol id="icon-compass" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88" fill="#1e2729" stroke="none"/></symbol>
+    <symbol id="icon-pen" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></symbol>
+    <symbol id="icon-signature" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c3-2 5-5 7-9s4-6 6-3-2 8-1 10 4-2 6-4"/><line x1="3" y1="21" x2="21" y2="21"/></symbol>
+    <symbol id="icon-clipboard" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4a2 2 0 0 1 4 0"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="13" y2="14"/></symbol>
+    <symbol id="icon-distillery" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="7" ry="2"/><ellipse cx="12" cy="19" rx="7" ry="2"/><line x1="5" y1="5" x2="5" y2="19"/><line x1="19" y1="5" x2="19" y2="19"/><path d="M5 10c2-1.5 12-1.5 14 0"/><path d="M5 14c2 1.5 12 1.5 14 0"/></symbol>
+    <symbol id="icon-spa" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6 3-9 8-10-1 6-4 9-8 10z"/><path d="M12 21c0-6-3-9-8-10 1 6 4 9 8 10z"/><path d="M12 21c0-5 1-8 2-10"/></symbol>
+    <symbol id="icon-grapes" viewBox="0 0 24 24" fill="none" stroke="#1e2729" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M12 5c2-2 4-2 5-1"/><circle cx="12" cy="9" r="2"/><circle cx="8.5" cy="12.5" r="2"/><circle cx="15.5" cy="12.5" r="2"/><circle cx="12" cy="16" r="2"/><circle cx="12" cy="16" r="2"/></symbol>
+  </defs></svg>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="category-tag"><span class="ses-icon" style="width:22px;height:22px;background:rgba(50,61,65,0.18);"><svg style="width:13px;height:13px;"><use href="#icon-lodging"/></svg></span>Lodging · South East Seneca</div>
+      <h1>Vineyard Villas</h1>
+      <p class="hero-tagline">Private A-frame villas on a 7-acre vineyard above Seneca Lake — panoramic balconies, your own campfire pit, and an on-site restaurant right on the wine trail.</p>
+      <a href="https://secure.thinkreservations.com/thevineyardvillas/reservations" target="_blank" rel="noopener" class="hero-book-btn">
+        <span class="ses-icon" style="width:22px;height:22px;background:rgba(50,61,65,0.18);"><svg style="width:12px;height:12px;"><use href="#icon-lodging"/></svg></span>
+        Check Availability
+      </a>
+    </div>
+  </div>
+
+  <!-- QUICK BAR -->
+  <div class="quick-bar"><div class="quick-bar-inner">
+    <div class="quick-item"><span class="ses-icon ses-icon-sm"><svg><use href="#icon-pin"/></svg></span>Burdett, NY</div>
+    <div class="quick-item"><span class="ses-icon ses-icon-sm"><svg><use href="#icon-lodging"/></svg></span><strong>8</strong>&nbsp;Villas + 2 Suites · Sleeps 2–12</div>
+    <div class="quick-item"><span class="ses-icon ses-icon-sm"><svg><use href="#icon-sun"/></svg></span>Panoramic Lake &amp; Vineyard Views</div>
+    <div class="quick-item"><span class="ses-icon ses-icon-sm"><svg><use href="#icon-fire"/></svg></span>Private Campfire Pit Per Villa</div>
+    <div class="quick-item"><span class="ses-icon ses-icon-sm"><svg><use href="#icon-restaurant"/></svg></span>On-Site Restaurant</div>
+    <div class="quick-item"><span class="ses-icon ses-icon-sm"><svg><use href="#icon-dog"/></svg></span>Pet Friendly (Villas A, B, C)</div>
+  </div></div>
+
+  <!-- BOOKING BANNER -->
+  <div class="book-banner">
+    <div class="book-banner-inner">
+      <div class="book-banner-text">
+        <strong>Ready to Book?</strong>
+        <span>Reserve online at thevineyardvillas.com or call 607.882.2345</span>
+      </div>
+      <div class="book-banner-btns">
+        <a href="https://secure.thinkreservations.com/thevineyardvillas/reservations" target="_blank" rel="noopener" class="book-btn-primary">
+          <span class="ses-icon" style="width:20px;height:20px;background:rgba(50,61,65,0.15);"><svg style="width:11px;height:11px;"><use href="#icon-lodging"/></svg></span>
+          Book Direct
+        </a>
+        <a href="tel:+16078822345" class="book-btn-secondary">
+          Call 607.882.2345
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN + SIDEBAR -->
+  <div class="main-wrapper">
+    <main>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Vineyard Villas</h2>
+        <p>Vineyard Villas is a boutique villa retreat in Burdett, NY, set on seven acres in the heart of the Seneca Lake Wine Trail. Eight private A-frame villas sit along the ridge above the lake, each with its own deck, balcony, full kitchen, gas grill, and campfire pit. Two additional suites in The Residence sit just down the hill, within easy walking distance.</p>
+        <p>What sets the property apart is the land itself. Two and a half acres of original Concord grapes still grow here, planted generations ago to supply the jelly and juice makers of the day. Guests are welcome to walk the rows and pick their own during harvest. There's a half-acre pond, picnic areas, and the Finger Lakes National Forest is close enough to reach on foot.</p>
+        <p>The location is genuinely hard to beat. You're looking straight out at Chateau Lafayette Reneau's vineyards and Seneca Lake below, with JR Dill, Hazlitt, Red Newt, and Two Goats all a short drive up or down Route 414. And you don't even have to leave the property for dinner — Hector Hideaway is right here on site.</p>
+        <div style="border-radius:6px;overflow:hidden;margin:1.25rem 0;"><img src="aerial.jpeg" alt="Aerial view of the Vineyard Villas A-frames lined along the ridge above Seneca Lake" style="width:100%;max-height:340px;object-fit:cover;object-position:center 40%;display:block;" /></div>
+        <div class="proud-badge">🍇 <strong>Working Vineyard On Site</strong> — 2.5 acres of original Concord grapes with a complimentary harvest experience for guests in season.</div>
+      </section>
+
+      <!-- WHY STAY -->
+      <section id="why-stay">
+        <p class="section-label">Why Stay Here</p>
+        <h2 class="section-title">What Makes It Special</h2>
+        <div class="why-stay">
+          <div class="why-card"><div class="icon-wrap"><span class="ses-icon ses-icon-md"><svg><use href="#icon-sun"/></svg></span></div><h4>Lake Views</h4><p>Every villa has a deck and second-floor balcony facing Seneca Lake and the vineyards.</p></div>
+          <div class="why-card"><div class="icon-wrap"><span class="ses-icon ses-icon-md"><svg><use href="#icon-fire"/></svg></span></div><h4>Private Fire Pit</h4><p>Your own campfire pit at each villa — firewood available on site for purchase.</p></div>
+          <div class="why-card"><div class="icon-wrap"><span class="ses-icon ses-icon-md"><svg><use href="#icon-grapes"/></svg></span></div><h4>Pick Your Own</h4><p>2.5 acres of original Concord grapes — harvest experience included for guests in season.</p></div>
+          <div class="why-card"><div class="icon-wrap"><span class="ses-icon ses-icon-md"><svg><use href="#icon-restaurant"/></svg></span></div><h4>On-Site Dining</h4><p>Hector Hideaway serves locally inspired food and drink right on the property.</p></div>
+          <div class="why-card"><div class="icon-wrap"><span class="ses-icon ses-icon-md"><svg><use href="#icon-kitchen"/></svg></span></div><h4>Full Kitchens</h4><p>Every unit has a full kitchen with oven, range, fridge, and coffee maker plus a gas grill.</p></div>
+          <div class="why-card"><div class="icon-wrap"><span class="ses-icon ses-icon-md"><svg><use href="#icon-water"/></svg></span></div><h4>Pond &amp; Grounds</h4><p>Half-acre pond, picnic areas, and the National Forest within walking distance.</p></div>
+          <div class="why-card"><div class="icon-wrap"><span class="ses-icon ses-icon-md"><svg><use href="#icon-dog"/></svg></span></div><h4>Pet Friendly</h4><p>Well-behaved pets welcome in Villas A, B, and C — add the pet fee at booking.</p></div>
+          <div class="why-card"><div class="icon-wrap"><span class="ses-icon ses-icon-md"><svg><use href="#icon-spa"/></svg></span></div><h4>In-Villa Massage</h4><p>Attuned Life Massage &amp; Wellness offers on-site appointments after a day on the trail.</p></div>
+        </div>
+      </section>
+
+      <!-- ACCOMMODATIONS -->
+      <section id="villas">
+        <p class="section-label">Accommodations</p>
+        <h2 class="section-title">Choose Your Villa</h2>
+        <p>Eight A-frame villas plus two suites in The Residence — from cozy one-bedroom getaways for two to a full five-bedroom house for a group of twelve.</p>
+        <div style="border-radius:6px;overflow:hidden;margin-bottom:1.25rem;"><img src="villas-pair.jpeg" alt="Two Vineyard Villas A-frames with private decks, balconies, picnic table and grill between them" style="width:100%;max-height:340px;object-fit:cover;object-position:center 45%;display:block;" /></div>
+        <div class="cottage-grid">
+          <div class="cottage-card">
+            <div class="cottage-card-header"><h4>Villas A – F</h4><span class="cottage-badge">Sleeps 4</span></div>
+            <div class="cottage-card-body">
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-lodging"/></svg></span>1 bedroom, queen bed · two-story</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-sun"/></svg></span>Deck below, balcony above</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-kitchen"/></svg></span>Full kitchen + convertible sofa bed</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-dog"/></svg></span>A, B &amp; C are pet friendly</div>
+            </div>
+          </div>
+          <div class="cottage-card">
+            <div class="cottage-card-header"><h4>Villas G &amp; H</h4><span class="cottage-badge">Sleeps 6</span></div>
+            <div class="cottage-card-body">
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-lodging"/></svg></span>2 bedrooms, 2 full baths</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-sun"/></svg></span>Deck and balcony with lake views</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-kitchen"/></svg></span>Full kitchen + outdoor gas grill</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-star"/></svg></span>Twice the space, same amenities</div>
+            </div>
+          </div>
+          <div class="cottage-card">
+            <div class="cottage-card-header"><h4>2-Bedroom Suite</h4><span class="cottage-badge">Sleeps 6</span></div>
+            <div class="cottage-card-body">
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-lodging"/></svg></span>King (splits to twins) + queen</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-fire"/></svg></span>Gas fireplace + pull-out sofa</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-kitchen"/></svg></span>Eat-in kitchen + laundry room</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-pin"/></svg></span>Lower level of The Residence</div>
+            </div>
+          </div>
+          <div class="cottage-card">
+            <div class="cottage-card-header" style="background:var(--amber);"><h4 style="color:var(--navy);">3-Bedroom Suite</h4><span class="cottage-badge" style="background:var(--navy);color:var(--amber);">Sleeps 6</span></div>
+            <div class="cottage-card-body">
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-lodging"/></svg></span>3 queen bedrooms · 2 full baths</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-kitchen"/></svg></span>Large eat-in kitchen + living area</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-fire"/></svg></span>Electric fireplace · upper level</div>
+              <div class="cottage-detail"><span class="ses-icon"><svg><use href="#icon-star"/></svg></span>Combine both suites for 5 BR / 3 BA</div>
+            </div>
+          </div>
+        </div>
+
+        <span class="table-head">Compare at a Glance</span>
+        <div class="table-scroll">
+          <table class="compare-table">
+            <thead>
+              <tr><th>Option</th><th>Bedrooms</th><th>Baths</th><th>Sleeps</th><th>Pets</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Villas A, B, C</strong><span>1-bedroom A-frame</span></td><td>1</td><td>1</td><td>Up to 4</td><td class="yes">Yes</td></tr>
+              <tr><td><strong>Villas D, E, F</strong><span>1-bedroom A-frame</span></td><td>1</td><td>1</td><td>Up to 4</td><td class="no">No</td></tr>
+              <tr><td><strong>Villas G &amp; H</strong><span>2-bedroom A-frame</span></td><td>2</td><td>2</td><td>Up to 6</td><td class="no">No</td></tr>
+              <tr><td><strong>2-Bedroom Suite</strong><span>Lower level, The Residence</span></td><td>2</td><td>1</td><td>Up to 6</td><td class="no">No</td></tr>
+              <tr><td><strong>3-Bedroom Suite</strong><span>Upper level, The Residence</span></td><td>3</td><td>2</td><td>Up to 6</td><td class="no">No</td></tr>
+              <tr class="row-highlight"><td><strong>Full Residence</strong><span>Both suites combined</span></td><td>5</td><td>3</td><td>Up to 12</td><td class="no">No</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Villas A–F include 2 guests in the base rate; additional guests are charged per night up to a maximum of 4. Rates are seasonally adjusted, and weekly stays are discounted. The 3-bedroom suite requires 45 days' cancellation notice rather than the standard 30. Check the booking system for current rates and availability.</p>
+      </section>
+
+      <!-- INSIDE A VILLA -->
+      <section id="inside">
+        <p class="section-label">Take a Look</p>
+        <h2 class="section-title">Inside a Villa</h2>
+        <p>Two floors, all of it pointed at the lake. Living and kitchen downstairs with French doors to the deck, bedroom and balcony upstairs.</p>
+        <div class="photo-grid">
+          <figure class="photo-card"><img src="living-room.jpeg" alt="Villa living room with sofa bed, dining table, and French doors opening to a deck overlooking Seneca Lake" /><figcaption>Living room with French doors to the deck</figcaption></figure>
+          <figure class="photo-card"><img src="kitchen.jpeg" alt="Full villa kitchen with oven, range, full-size refrigerator, coffee maker, and adjoining dining area" /><figcaption>Full kitchen, range and coffee maker</figcaption></figure>
+          <figure class="photo-card"><img src="bedroom.jpeg" alt="Upstairs villa bedroom with queen bed under the A-frame peak and a door to the private balcony" /><figcaption>Queen bedroom upstairs, door to the balcony</figcaption></figure>
+          <figure class="photo-card"><img src="dining.jpeg" alt="Villa dining nook with table for four, corner windows facing Seneca Lake, and a wall-mounted TV" /><figcaption>Dining nook with corner lake windows</figcaption></figure>
+          <figure class="photo-card"><img src="balcony-view.jpeg" alt="View from a villa balcony over the vineyard rows and open lawn to Seneca Lake" /><figcaption>The view from the upstairs balcony</figcaption></figure>
+          <figure class="photo-card"><img src="porch.jpeg" alt="Covered villa porch with chairs looking out over the lawn, fire pit circle, and Seneca Lake beyond" /><figcaption>Covered porch and the fire pit lawn</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- AMENITIES -->
+      <section id="amenities">
+        <p class="section-label">Amenities</p>
+        <h2 class="section-title">What's Included</h2>
+        <div class="amenity-grid">
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-sun"/></svg></span>Private balcony · Lake views</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-fire"/></svg></span>Personal campfire pit</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-kitchen"/></svg></span>Full kitchen · Oven &amp; range</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-grill"/></svg></span>Gas BBQ grill outside</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-ac"/></svg></span>2-zone AC &amp; heat</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-water"/></svg></span>Radiant floor heat in bath</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-wifi"/></svg></span>Complimentary WiFi</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-star"/></svg></span>Linens, towels &amp; toiletries</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-grapes"/></svg></span>On-site vineyard access</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-water"/></svg></span>Half-acre pond &amp; picnic area</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-restaurant"/></svg></span>Hector Hideaway on site</div>
+          <div class="amenity-item"><span class="ses-icon"><svg><use href="#icon-spa"/></svg></span>Massage by appointment</div>
+        </div>
+      </section>
+
+      <!-- STORY -->
+      <div class="story-section">
+        <p class="story-label"><span class="ses-icon" style="width:24px;height:24px;background:rgba(238,175,112,0.2);"><svg style="width:13px;height:13px;"><use href="#icon-pen" style="stroke:var(--amber)"/></svg></span>In Our Words</p>
+        <h3 class="story-title">Our Story</h3>
+        <div class="story-body">
+          <p>Vineyard Villas has been quietly doing its own thing on the Burdett hillside for years, and it works because it never tried to be a resort. Eight A-frames on a working vineyard, each one private, each one with a fire pit and a balcony pointed at the water. That's the whole idea.</p>
+          <p>The Concord vines out front are the oldest thing on the property. They went in generations ago to feed the jelly and juice trade, and they're still producing. Guests walk the rows in September and pick their own. Add a half-acre pond, the National Forest at the edge of the field, and a restaurant you can get to without moving your car, and you've got one of the more complete stays on the east side.</p>
+        </div>
+        <p class="story-attribution"><span class="ses-icon" style="width:22px;height:22px;background:rgba(238,175,112,0.15);"><svg style="width:12px;height:12px;"><use href="#icon-signature" style="stroke:var(--amber)"/></svg></span>— South East Seneca</p>
+      </div>
+
+      <!-- TIPS -->
+      <section id="tips">
+        <p class="section-label">Plan Your Stay</p>
+        <h2 class="section-title">Tips for Guests</h2>
+        <ul class="tips-list">
+          <li><span class="ses-icon ses-icon-sm"><svg><use href="#icon-clock"/></svg></span>Book well ahead for fall harvest, Watkins Glen race weekends, and Wine Trail event weekends — those dates fill first.</li>
+          <li><span class="ses-icon ses-icon-sm"><svg><use href="#icon-dog"/></svg></span>Traveling with a dog? Only Villas A, B, and C are pet friendly, and the pet fee has to be added at booking, not on arrival.</li>
+          <li><span class="ses-icon ses-icon-sm"><svg><use href="#icon-fire"/></svg></span>Buy firewood on site. New York regulations do not allow you to bring firewood in from out of state.</li>
+          <li><span class="ses-icon ses-icon-sm"><svg><use href="#icon-grapes"/></svg></span>Come in September and walk the Concord rows. The harvest experience is complimentary for guests in season.</li>
+          <li><span class="ses-icon ses-icon-sm"><svg><use href="#icon-wifi"/></svg></span>It's a rural property, so WiFi can wander. Download your maps and playlists before you get here.</li>
+          <li><span class="ses-icon ses-icon-sm"><svg><use href="#icon-restaurant"/></svg></span>Check Hector Hideaway's hours before you plan dinner — they shift with the season.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-header"><span class="ses-icon" style="width:22px;height:22px;"><svg style="width:12px;height:12px;"><use href="#icon-clipboard"/></svg></span>Book Your Stay</div>
+        <div class="sidebar-card-body">
+          <div class="info-row"><span class="ses-icon ses-icon-sm"><svg><use href="#icon-pin"/></svg></span><div><span class="label">Address</span>3708 Mathews Road<br/>Burdett, NY 14818</div></div>
+          <div class="info-row"><span class="ses-icon ses-icon-sm"><svg><use href="#icon-phone"/></svg></span><div><span class="label">Phone</span><a href="tel:+16078822345">607.882.2345</a></div></div>
+          <div class="info-row"><span class="ses-icon ses-icon-sm"><svg><use href="#icon-globe"/></svg></span><div><span class="label">Website</span><a href="https://thevineyardvillas.com" target="_blank" rel="noopener">thevineyardvillas.com</a></div></div>
+          <hr class="divider"/>
+          <span class="hours-sub-head">Check-In / Check-Out</span>
+          <table class="hours-table">
+            <tr><td>Check-in</td><td>3:00 PM</td></tr>
+            <tr><td>Check-out</td><td>11:00 AM</td></tr>
+            <tr><td>Arrival</td><td>Self check-in</td></tr>
+          </table>
+          <span class="hours-sub-head">Season</span>
+          <table class="hours-table">
+            <tr><td>Open</td><td>Year-round</td></tr>
+            <tr><td>Peak</td><td>Fall harvest</td></tr>
+          </table>
+          <div class="book-block">
+            <a href="https://secure.thinkreservations.com/thevineyardvillas/reservations" target="_blank" rel="noopener" class="btn-direct">
+              <span class="ses-icon" style="width:20px;height:20px;background:rgba(50,61,65,0.15);"><svg style="width:11px;height:11px;"><use href="#icon-lodging"/></svg></span>
+              Book Direct
+            </a>
+            <a href="tel:+16078822345" class="btn-phone">
+              Call 607.882.2345
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/thevineyardvillas" target="_blank" rel="noopener"><span class="ses-icon" style="width:20px;height:20px;"><svg style="width:11px;height:11px;"><use href="#icon-facebook"/></svg></span>Facebook</a>
+            <a href="http://www.pinterest.com/vineyardvillas/" target="_blank" rel="noopener"><span class="ses-icon" style="width:20px;height:20px;"><svg style="width:11px;height:11px;"><use href="#icon-pinterest"/></svg></span>Pinterest</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header"><span class="ses-icon" style="width:22px;height:22px;"><svg style="width:12px;height:12px;"><use href="#icon-pin"/></svg></span>Location</div>
+        <div class="map-wrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950!2d-76.8790!3d42.4210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3708+Mathews+Road%2C+Burdett%2C+NY+14818!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Vineyard Villas map"></iframe></div>
+        <div class="map-note"><span class="ses-icon" style="width:20px;height:20px;"><svg style="width:11px;height:11px;"><use href="#icon-map"/></svg></span>3708 Mathews Rd · Burdett, NY · East shore of Seneca Lake</div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header"><span class="ses-icon" style="width:22px;height:22px;"><svg style="width:12px;height:12px;"><use href="#icon-compass"/></svg></span>Nearby Highlights</div>
+        <div class="sidebar-card-body">
+          <div class="nearby-item"><span class="ses-icon ses-icon-md"><svg><use href="#icon-restaurant"/></svg></span><div><strong>Hector Hideaway</strong><span>On-site restaurant and bar — you don't have to drive anywhere</span></div></div>
+          <div class="nearby-item"><span class="ses-icon ses-icon-md"><svg><use href="#icon-winery"/></svg></span><div><strong>Chateau Lafayette Reneau</strong><span>Their vineyards are the view from your balcony</span></div></div>
+          <div class="nearby-item"><span class="ses-icon ses-icon-md"><svg><use href="#icon-winery"/></svg></span><div><strong>JR Dill Winery</strong><span>Small-batch east-shore winery just up Route 414</span></div></div>
+          <div class="nearby-item"><span class="ses-icon ses-icon-md"><svg><use href="#icon-hike"/></svg></span><div><strong>Finger Lakes National Forest</strong><span>Trails and pastureland within walking distance</span></div></div>
+          <div class="nearby-item"><span class="ses-icon ses-icon-md"><svg><use href="#icon-hike"/></svg></span><div><strong>Watkins Glen State Park</strong><span>~15 min south · Gorge trail and 19 waterfalls</span></div></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- KEEP EXPLORING -->
+  <div class="keep-exploring">
+    <div class="keep-exploring-inner">
+      <p class="section-label">While You're Here</p>
+      <h2 class="section-title">Explore South East Seneca</h2>
+      <p style="color:#3a4f54;font-size:0.95rem;margin:0.5rem 0 0;">Everything you need for an exceptional Finger Lakes stay — minutes from Vineyard Villas.</p>
+      <div class="keep-exploring-grid">
+        <a href="https://southeastseneca.github.io/Stonecat-cafe/" target="_top" class="ke-card"><div class="ke-card-body"><div class="ke-label">Restaurant · Hector, NY</div><div class="ke-title">Stonecat Cafe</div><p class="ke-desc">Farm-to-table organic cuisine since 1999 — pub nights, live music, and sunset views over Seneca Lake.</p><div class="ke-arrow">Explore →</div></div></a>
+        <a href="https://southeastseneca.github.io/Lucky-Hare-Listing/" target="_top" class="ke-card"><div class="ke-card-body"><div class="ke-label">Brewery · Hector, NY</div><div class="ke-title">Lucky Hare Brewing</div><p class="ke-desc">Craft beer taproom with lake views, Babe's Burgers on-site, and weekly live music all summer long.</p><div class="ke-arrow">Explore →</div></div></a>
+        <a href="https://southeastseneca.github.io/Red-Newt-Cellars/" target="_top" class="ke-card"><div class="ke-card-body"><div class="ke-label">Winery · Hector, NY</div><div class="ke-title">Red Newt Cellars</div><p class="ke-desc">Preeminent Finger Lakes Riesling since 1998, with a farm-to-table bistro and single-vineyard wine lineup.</p><div class="ke-arrow">Explore →</div></div></a>
+        <a href="https://southeastseneca.com" target="_top" class="ke-card ke-card-dark"><div class="ke-card-body" style="padding-top:1.75rem;"><span class="ke-icon">🗺️</span><div class="ke-label">Full Directory</div><div class="ke-title">South East Seneca</div><p class="ke-desc">Wineries, breweries, distilleries, restaurants, and experiences across the east shore of Seneca Lake.</p><div class="ke-arrow">Visit southeastseneca.com →</div></div></a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <p><strong>Vineyard Villas</strong> &nbsp;·&nbsp; 3708 Mathews Road, Burdett, NY 14818 &nbsp;·&nbsp; <a href="tel:+16078822345">607.882.2345</a> &nbsp;·&nbsp; Part of <a href="https://southeastseneca.com">South East Seneca</a></p>
+    <p style="margin-top:0.4rem;">© 2026 South East Seneca Lake Tourism. All rights reserved.</p>
+  </footer>
+  <script>function sendHeight(){var h=document.documentElement.scrollHeight||document.body.scrollHeight;window.parent.postMessage({iframeHeight:h},"*");}window.addEventListener("load",sendHeight);window.addEventListener("resize",sendHeight);setTimeout(sendHeight,500);setTimeout(sendHeight,1500);setTimeout(sendHeight,3000);</script>
+</body>
+</html>
